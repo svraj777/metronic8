@@ -44,7 +44,7 @@ export function Login() {
       login(values.email, values.password)
         .then(({data: {accessToken}}) => {
           setLoading(false)
-          //   dispatch(auth.actions.login(accessToken))
+          dispatch(auth.actions.login(accessToken))
         })
         .catch(() => {
           setLoading(false)
